@@ -2,9 +2,12 @@
 title: "Configure distributed availability group (Always On Availability Group) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "availability-groups"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   "dbe-high-availability"
 ms.tgt_pltfrm: ""
@@ -14,9 +17,10 @@ caps.latest.revision: 28
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
-
 # Configure distributed availability group  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 To create a distributed availability group, you must create an availability group and listener on each Windows Server Failover Cluster (WSFC). You then combine these availability groups into a distributed availability group. The following steps provide a basic example in Transact-SQL. This example does not cover all of the details of creating availability groups and listeners; instead, it focuses on highlighting the key requirements. 
 
@@ -101,7 +105,7 @@ Next add a listener for the primary availability group on the first WSFC. In thi
   
 ```sql
 ALTER AVAILABILITY GROUP [ag1]    
-    ADD LISTENER 'ag1-listener' ( 
+    ADD LISTENER 'ag1-listener' ( 
         WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , 
         PORT = 60173);    
 GO  
@@ -146,7 +150,7 @@ GO
   
 ```  
 ALTER AVAILABILITY GROUP [ag2]    
-    ADD LISTENER 'ag2-listener' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173);    
+    ADD LISTENER 'ag2-listener' ( WITH IP ( ('2001:db88:f0:f00f::cf3c'),('2001:4898:e0:f213::4ce2') ) , PORT = 60173);    
 GO  
 ```  
   
@@ -155,22 +159,22 @@ GO
   
 ```sql  
 CREATE AVAILABILITY GROUP [distributedag]  
-   WITH (DISTRIBUTED)   
-   AVAILABILITY GROUP ON  
-      'ag1' WITH    
-      (   
-         LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',    
-         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
-         FAILOVER_MODE = MANUAL,   
-         SEEDING_MODE = AUTOMATIC   
-      ),   
-      'ag2' WITH    
-      (   
-         LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022',   
-         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
-         FAILOVER_MODE = MANUAL,   
-         SEEDING_MODE = AUTOMATIC   
-      );    
+   WITH (DISTRIBUTED)   
+   AVAILABILITY GROUP ON  
+      'ag1' WITH    
+      (   
+         LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',    
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
+         FAILOVER_MODE = MANUAL,   
+         SEEDING_MODE = AUTOMATIC   
+      ),   
+      'ag2' WITH    
+      (   
+         LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022',   
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
+         FAILOVER_MODE = MANUAL,   
+         SEEDING_MODE = AUTOMATIC   
+      );    
 GO   
 ```  
   
@@ -182,25 +186,31 @@ GO
   
 ```sql  
 ALTER AVAILABILITY GROUP [distributedag]   
-   JOIN   
-   AVAILABILITY GROUP ON  
-      'ag1' WITH    
-      (   
-         LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',    
-         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
-         FAILOVER_MODE = MANUAL,   
-         SEEDING_MODE = AUTOMATIC   
-      ),   
-      'ag2' WITH    
-      (   
-         LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022',   
-         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
-         FAILOVER_MODE = MANUAL,   
-         SEEDING_MODE = AUTOMATIC   
-      );    
+   JOIN   
+   AVAILABILITY GROUP ON  
+      'ag1' WITH    
+      (   
+         LISTENER_URL = 'tcp://ag1-listener.contoso.com:5022',    
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
+         FAILOVER_MODE = MANUAL,   
+         SEEDING_MODE = AUTOMATIC   
+      ),   
+      'ag2' WITH    
+      (   
+         LISTENER_URL = 'tcp://ag2-listener.contoso.com:5022',   
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,   
+         FAILOVER_MODE = MANUAL,   
+         SEEDING_MODE = AUTOMATIC   
+      );    
 GO  
 ```  
 
+## <a name="failover"></a> Join the database on the secondary of the second availability group
+After the database on the secondary of the second availability group has went into a restoring state you have to manually join it to the availability group.
+
+```sql  
+ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag1];   
+```  
   
 ## <a name="failover"></a> Fail over to a secondary availability group  
 Only manual failover is supported at this time. The following Transact-SQL statement fails over the distributed availability group named `distributedag`:  
@@ -228,7 +238,10 @@ Only manual failover is supported at this time. The following Transact-SQL state
         );  
        
       ```  
-  
+   >[!NOTE]
+   >Similarly to regular availability groups, the synchronization status between two availability groups replicas part of a distributed      availability group, depends on the availability mode of both replicas. For example, for synchronous commit to occur, both the current    primary availability group and the secondary availability group must be configured with synchronous_commit availability mode.  
+
+
 1. Wait until the status of the distributed availability group has changed to `SYNCHRONIZED`. Run the following query on the SQL Server that hosts the primary replica of the primary availability group. 
     
       ```sql  

@@ -1,10 +1,13 @@
 ---
 title: "Changelog for SQL Server Data Tools (SSDT) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/23/2017"
+ms.date: "12/22/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssdt"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssdt"
 ms.tgt_pltfrm: ""
@@ -14,11 +17,223 @@ caps.latest.revision: 31
 author: "stevestein"
 ms.author: "sstein"
 manager: "craigg"
+ms.workload: "Active"
 ---
 # Changelog for SQL Server Data Tools (SSDT)
-This change log is for [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+This change log is for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 For detailed posts about what's new and changed, see [the SSDT Team blog](https://blogs.msdn.microsoft.com/ssdt/)
+
+## SSDT for Visual Studio 2017 (15.5.1)
+Build number: 14.0.16148.0
+  
+### What's New?
+
+Visual Studio 2017 (15.5.1) is the same release as version 15.5.0 except for the following bug fixes to the installer:
+
+1.	Fix an issue where the installer hangs on SQL Server Integration Services post install.
+2.	Fix an issue where setup fails with the following error message: "The requested metafile operation is not support (0x800707D3)".
+
+In addition to these two bug fixes, the following details for 15.5.0 still apply to 15.5.1
+
+## SSDT for Visual Studio 2017 (15.5.0)
+Build number: 14.0.16146.0
+  
+### What's New?
+
+SSDT for Visual Studio 2017 (15.5.0) moves from preview to general availability (GA).
+
+**Installer**
+1. Setup UI is localized.
+1. Replace the icon with a higher quality version.
+
+**Integration Services (IS)**
+1. Added package validation step in Deployment Wizard when deploying to Azure SSIS IR in ADF, which discovers potential compatibility issues in SSIS packages to execute in Azure SSIS IR. For more info, see [Validate SSIS packages deployed to Azure](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
+1. SSIS extension is localized.
+
+### Bug fixes
+
+**Integration Services (IS)**
+1. Fixed an issue where the layout of OLEDB and ADO.NET connection manager is corrupt.
+2. Fixed an issue where an assembly not found error is raised when attempting to edit a Dimension Processing Task.
+
+### Known issues
+
+**Integration Services (IS)**
+SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+
+
+
+## SSDT 17.4 for Visual Studio 2015
+Build number: 14.0.61712.050
+
+### What's New?
+
+**Analysis Services (AS) projects**
+- Added three new options to tabular projects (under Options > Analysis Services Tabular > Data Import):
+  - Enable Legacy data sources - allows the user to create older "1200 compatibility mode" data sources in newer compatibility modes.
+  - Automatic type detection - when enabled the Query Editor for modern data sources will attempt to detect data types for unstructured queries when they are loaded. If the detection is successful, a new step may be added to the query.
+  - Run background analysis - when enabled the Query Editor for modern data sources will run queries against the data source as the queries are loaded in order to analyze the query's output schema.
+
+**Integration Services (IS)**
+- Added package validation step in Deployment Wizard when deploying to Azure SSIS IR in ADF, which discovers potential compatibility issues in SSIS packages to execute in Azure SSIS IR. For more info, see [Validate SSIS packages deployed to Azure](..\integration-services\lift-shift\ssis-azure-validate-packages.md).
+
+
+### Bug fixes
+
+**Analysis Services (AS) projects:**
+- Fixed an issue that could cause an unhandled exception when checking in model changes to TFS.
+- Fixed an issue that could cause an exception when adding table with complex M expression to a 1400 model.
+- Fixed an issue that could cause a crash in Visual Studio when searching metadata in the model diagram view.
+- Fixed an issue with 1400 models that could cause calculated columns to get removed from the table definition when saving changes to partition M queries.
+- Fixed an issue when using Rename Query on 1400 models in the Get Data\Table Editor UI that could freeze while validating compatibility with current data model.
+- Fixed an issue that caused a missing Newtonsoft assembly reference when deploying 1400 model to Azure Analysis Service.
+- Fixed an issue that caused an error importing data through PQ into a 1400 model in certain cases.
+- Fixed a scaling issue in the PowerQuery user interface dialogs that would appear when Windows scaling set.
+- Fixed an issue with renaming roles.
+- Fixed issues with the Project Configurations that may have caused changes to not save\sync properly in some cases.
+- Fixed an issue in the PowerQuery editor that was adding "Change Type" steps automatically.
+- Fixed an issue that caused an error opening the BIM file after switching to\from Integrated Workspace mode.
+- MaxConnections property is now visible for data sources in tabular models.
+- Increased the initial size of the PowerQuery editor window.
+- M Query keywords such as "Source" in the PowerQuery editor will now show as localized.
+- Cache credentials when working with 1400 models and structured data sources to prevent having to enter the same credentials for each table edited.
+
+**RS Projects:**
+- Fixed an issue that prevented deploying a single report in a multi report project
+- Fixed an issue with Shared Data Sources that may have caused an issue on deployment
+- Fixed an issue that could crash in the Undo manager when switching between code view, design view, and query editor window
+- Fixed an issue that may have caused the parameter pane to disappear after runtime error
+- Fixed an issue with Report Projects that may have caused them to lose source control mappings
+
+**Integration Services:**
+- Fixed an issue that may have occurred when switching a connection on an Analysis Services Process Task
+- Fixed an issue where some tasks/components are not localized well.
+- Fixed an issue where CDC components break after applying a SQL fix for CDC that adds \__$command\_id column.
+
+
+## SSDT for Visual Studio 2017 (15.4.0 preview)
+Build number: 14.0.16134.0
+  
+### What's New?
+
+This release provides a standalone web installer for SQL Server Database, Analysis Services, Reporting Services, and Integration Services projects in Visual Studio 2017 15.4 or later.
+
+### Installer
+
+- Allow user to set nickname when installing a new SSDT for VS2017 instance.
+- Hide feature selection checkboxes of installer if no VS instance is selected.
+- Refine some messages of installer based on customer feedback.
+- Fix an issue that installer doesn’t support upgrade.
+
+
+### SSIS
+
+- Fix an issue that Import/Export Wizard cannot list data source when Azure feature pack is installed.
+- Fix an issue that editing an SSIS Analysis Services Process Task throws an exception while switching connection.
+- Fix an issue that CDC components breaks after applying SQL fix that adds __$command_id column.
+- Fix an issue that 3rd party package can’t be edited and executed when targeting old SQL Server.
+- Fix an issue that Flat File Source configure dialog doesn’t show correctly when double click DTSWizard.exe and select Flat File Source.
+- Fix an issue that a package containing Azure Feature Pack task/component can’t execute when targeting SQL Server 2017.
+
+
+**Known Issues**
+
+- The installer is not localized.
+- SSIS Execute Package Task doesn't support debugging when *ExecuteOutOfProcess* is set to True. This issue only applies to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog is not impacted.
+
+
+## SSDT 17.3 for Visual Studio 2015
+Build number: 14.0.61709.290
+
+### What's New?
+
+**Analysis Services (AS)**
+
+- Cosmos DB and HDI Spark are enabled in 1400 models.
+- Tabular data source properties.
+- "Blank Query" is now a supported option for creating a new Query in the Query Editor for models at the 1400 compatibility level.
+- The Query Editor for 1400-mode models now allows for saving queries without new tables automatically being processed.
+
+**Reporting Services (RS)**
+
+- Projects now prompt on open to upgraded format to support using MSBuild to build and deploy.
+
+### Known Issues
+
+**Analysis Services (AS)**
+
+- Models of 1400 compatibility level in Direct Query mode that have perspectives fail on querying or discovering metadata.
+
+**Reporting Services (RS)**
+
+- New Report Project format does not retain source control binding, and raises an error similar to the  message:
+
+   *The project file C:\path is not bound to source control, but the solution contains source control binding information in it.*
+ 
+   To work around this issue, click **Use solution binding**  every time the solution is opened.
+
+- After upgrading your project to the new MSBuild format, save may fail with a message similar to the following:
+
+   *"Parameter "unevaluatedValue" cannot be null."*
+
+   To work around this issue, please update your *Project Configurations* and populate the *Platform* property.
+
+### Bug Fixes
+
+**Analysis Services (AS)**
+
+- Vastly improved performance when loading tabular model diagram view.
+- Fixed a number of issues to improve PowerQuery integration and experience in 1400-compat level models.
+   - Fixed an issue that prevented editing permissions for File sources.
+   - Fixed an issue Can't change the source for File sources.
+   - Fixed an issue Wrong UI displayed for File sources.
+- Fixed an issue that caused the "JoinOnDate" property to be removed when a "Join on Date" relationship was made inactive.
+- New Query option in Query Builder now allows creating a new blank query.
+- Fixed an issue that caused edits to an existing data source query to not update the model definition of the table in 1400-compat level.
+- Fixed issues with custom context expressions that may have caused exceptions.
+- When importing new table with duplicate name in 1400 tabular models, user is now be notified that there was a name conflict and the name adjusted to be unique.
+- Current User impersonation mode has been removed from models in Import mode, as it is not a supported scenario.
+- PowerQuery integration now supports Options for Additional Data Sources (OData.Feed, Odbc.DataSource, Access.Database, SapBusinessWarehouse.Cubes).
+- PowerQuery Options strings for Data Sources will now correctly show localized text based on client locale.
+- Diagram view now shows newly created columns from M Query Editor in 1400-compat level models.
+- Power Query Editor now gives the option to not import data.
+- Fixed an issue with installing a data cartridge used to import tables from Oracle in multi-dimensional models in VS2017.
+- Fixed an issue that may have led to a crash when mouse cursor leaving the tabular formula bar in rare cases.
+- Fixed an issue in Edit Table Properties dialog where changing the table name incorrectly changed source table name causing an unexpected error.
+- Fixed a crash that could occur in VS2017 when trying to invoke Test Cube Security in the Roles designer Cell Data tab designer in multi-dimensional projects.
+- SSDT: Properties are uneditable for tabular data sources.
+- Fixed an issue that may have caused MSBuild and DevEnv builds to not work correctly in some cases with solution files.
+- Vastly improved performance when committing model changes (DAX edits for measures, calculated columns) when tabular model contains larger metadata
+- Fixed a number of issues with importing data using PowerQuery in 1400-compat level models
+   - Import takes a long time after clicking Import and UI shows no status
+   - Large list of tables on Navigator view when trying to select tables to import very slow
+   - Query Editor poor performance working with list of 35 queries in Query editor view (issue in PBI desktop too)
+   - Importing multiple tables disabled toolbar and may never finish in certain situations 
+   - Model designer appeared disabled and showed no data after import of table using PQ
+   - Unselecting "Create new Table" in PQ UI still resulted in a new table being created
+   - Folder data source not prompting for credentials 
+   - Object reference not set exception that may occur trying to get updated credentials on structured data source
+   - Opening partition manager with M-expression was very slow
+   - Selecting Properties on table in PQ editor didn’t show the properties
+- Improved robustness in Power Query UI integration to catch top-level exceptions and show in Output window
+- Fixed an issue with ChangeSource on structure datasource not persisting changes when context expression
+- Fixed an issue where M expression errors may cause failures to update the model without error message shown
+- Fixed an issue closing SSDT with error "The build must be stopped before the solution can be closed"
+- Fixed an issue where VS may appear to hang when setting wrong impersonation mode in 1400 compat-level model 
+- Detail rows property will now only be serialized to JSON when it is not empty (changed from default)
+- Oracle OLEDB driver now available in the list for tabular Direct Query mode
+- Adding M-Expressions in 1400-compat tabular models now appear\refresh in the Tabular Model Explorer (TME)
+- Fixed an issue that caused MSOLAP provider to not show up in VS2017 when trying to import using “Other” datasource in pre-1400 compat level models
+- Fixed an issue where adding a translation through TME may cause issues 
+- Fixed an issue in the Object Level Security interface that caused the tab to appear\hide incorrectly in certain cases
+- Fixed an issue where failure could occur attempting to open previously loaded multi-dimensional model using Connect to Database dialog
+- Fixed an issue that caused an error when adding custom assemblies to a multi-dimensional model
+
+**Reporting Services (RS)**
+
+- Fixed an issue with compile and build of RDLC in VS 2017
 
 ## SSDT for Visual Studio 2017 (15.3.0 preview)
 Build number: 14.0.16121.0
@@ -45,7 +260,7 @@ Build number: 14.0.61707.300
 
 
 **AS projects:**
-- Object Level Security can now be configured in the *Roles* dialog for advanced security in 1400 compatability level tabular models.
+- Object Level Security can now be configured in the *Roles* dialog for advanced security in 1400 compatibility level tabular models.
 - New AAD role member selection for users without email addresses in AS Azure models in SSDT AS projects for VS2017.
 - New AS Azure "Always Prompt" project property in SSDT AS tabular projects to customize behavior of ADAL credential caching.
 
@@ -122,8 +337,8 @@ Build number: 14.0.61704.140
 ### What's New?
 **Database projects:**
 - Amending a clustered index on a view will no longer block deployment
-- Schema comparison strings relating to column encryption will use the proper name rather than the instance name.   
-- Added a new command line option to SqlPackage: ModelFilePath.  This provides an option for advanced users to specify an external model.xml file for import, publishing and scripting operations   
+- Schema comparison strings relating to column encryption uses the proper name rather than the instance name.   
+- Added a new command line option to SqlPackage: ModelFilePath.  This provides an option for advanced users to specify an external model.xml file for import, publishing, and scripting operations   
 - The DacFx API was extended to support  Azure AD Universal Authentication and Multi-factor authentication (MFA)
 
 **IS projects:**
@@ -136,9 +351,9 @@ Build number: 14.0.61704.140
     - DirectQuery is available for SQL Oracle, And Teradata if user has installed 3rd Party drivers
     - Add columns by example in PowerQuery
     - Data access options in 1400 models (model-level properties used by M engine)
-        - Enable fast combine (default is false - when set to true, the mashup engine will ignore data source privacy levels when combining data)
-        - Enable Legacy Redirects (default is false – when set to true, the mashup engine will follow HTTP redirects that are potentially insecure.  For example, a redirect from an HTTPS to an HTTP URI)  
-        - Return Error Values as Null (default is false – when set to true, cell level errors will be returned as null. When false, an exception will be raised is a cell contains an error)  
+        - Enable fast combine (default is false - when set to true, the mashup engine ignores data source privacy levels when combining data)
+        - Enable Legacy Redirects (default is false – when set to true, the mashup engine follows HTTP redirects that are potentially insecure.  For example, a redirect from an HTTPS to an HTTP URI)  
+        - Return Error Values as Null (default is false – when set to true, cell level errors are returned as null. When false, an exception is raised is a cell contains an error)  
     - Additional data sources (file data sources) using PowerQuery
         - Excel 
 		- Text/CSV 
@@ -163,7 +378,7 @@ Build number: 14.0.61704.140
 - Tabular: A variety of enhancements and performance fixes for DAX parsing and the formula bar.
 - Tabular: Tabular Model Explorer will no longer be visible if no SSAS Tabular projects are open.
 - Multi-dimensional: Fixed an issue where the processing dialog was unusable on High-DPI machines.
-- Tabular: Fixed an issue where SSDT faults when opening any BI project when SSMS is already open.[Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- Tabular: Fixed an issue where SSDT faults when opening any BI project when SSMS is already open. [Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
 - Tabular: Fixed an issue where hierarchies were not being properly saved to the bim file in an 1103 model.[Connect Item](http://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
 - Tabular: Fixed an issue where Integrated Workspace mode was allowed on 32-bit machines even though it is not supported.
 - Tabular: Fixed an issue where clicking on anything while in semi-select mode (typing a DAX expression but clicking a measure, for example) could cause crashes.
@@ -362,7 +577,7 @@ Build number: 14.0.60812.0
 
 - **Release Versioning & Numbering:** Releases are now tagged numerically rather than by month. This aligns with the new SSMS policy and simplifies cases where we have multiple releases or hotfixes in a month. This release is 16.3 which means the third update after the RTM release. Any hotfix will be 16.3.1 and so on, with our next update (planned for next month) being 16.4.
 - **Analysis Services – Tabular Model Explorer:** Tabular Model Explorer lets you conveniently navigate through the various metadata objects in a model, such as data sources, tables, measures, and relationships. It is implemented as a separate tools window that you can display by opening the View menu in Visual Studio, pointing to Other Windows, and then clicking Tabular Model Explorer. The Tabular Model Explorer appears by default in the Solution Explorer area on a separate tab. Tabular Model Explorer organizes the metadata objects in a tree structure that closely resembles the schema of a tabular 1200 model and many more new features.
-- **Database Tools – Always Encrypted**:  This release provides new [Always Encrypted Key management](https://msdn.microsoft.com/library/mt708953.aspx) dialogs to easily add Column Master Keys or Column Encryption Keys to your database project, or a live database in SQL Server Object Explorer. This release supports certificates in Windows Certificate Store. In upcoming releases, Azure Key Vault and CNG Providers will be supported.
+- **Database Tools – Always Encrypted**:  This release provides new [Always Encrypted Key management](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) dialogs to easily add Column Master Keys or Column Encryption Keys to your database project, or a live database in SQL Server Object Explorer. This release supports certificates in Windows Certificate Store. In upcoming releases, Azure Key Vault and CNG Providers will be supported.
     - While creating Column Master Key or Column Encryption Key, you may experience that the changes are not reflected on SQL Server Object Explorer immediately after clicking Update Database. To workaround, refresh the database node in SQL Server Object Explorer.
     - If you try to encrypt a column in a table with data from SQL Server Object Explorer, you may experience a failure. This feature is currently supported only in SSDT database projects and SSMS. Support for SQL Server Object Explorer will be enabled in a later release.
 
@@ -450,6 +665,6 @@ SSDT General Availability (GA) is now released. The SSDT GA update for June 2016
 [Download SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Previous releases of SQL Server Data Tools &#40;SSDT and SSDT-BI&#41;](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
 [What's New in Database Engine](https://msdn.microsoft.com/library/bb510411.aspx)  
-[What's New in Analysis Services](https://msdn.microsoft.com/library/bb522628.aspx)  
-[What's New in Integration Services](https://msdn.microsoft.com/library/bb522534.aspx)  
+[What's New in Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)  
+[What's New in Integration Services](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   

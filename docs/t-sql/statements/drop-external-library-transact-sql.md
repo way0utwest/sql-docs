@@ -2,9 +2,12 @@
 title: "DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/17/2017"
-ms.prod: "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "sql-database"
+ms.service: ""
+ms.component: "t-sql|statements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""
@@ -21,11 +24,12 @@ ms.author: "jeannt"
 manager: "jhubbard"
 ---
 # DROP EXTERNAL LIBRARY (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Deletes an existing package library.
 
 ## Syntax  
+
 ```
 DROP EXTERNAL LIBRARY library_name  
 [ AUTHORIZATION owner_name ];  
@@ -55,17 +59,17 @@ Unlike other `DROP` statements in SQL Server, this statement supports specifying
 
 ## Examples
 
-Add ggplot2 to a database:
+Add a custom R package, named `customPackage`, to a database:
 
 ```sql
-CREATE EXTERNAL LIBRARY ggplot2 
-FROM 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\ggplot2.zip';
+CREATE EXTERNAL LIBRARY customPackage 
+FROM 'C:\Users\Username\CustomPackages\customPackage.zip';
 ```
 
-Delete the ggplot2 library.
+Delete the `customPackage` library.
 
 ```sql
-DROP EXTERNAL LIBRARY ggplot2 <user_name>;
+DROP EXTERNAL LIBRARY customPackage <user_name>;
 ```
 
 ## See also  

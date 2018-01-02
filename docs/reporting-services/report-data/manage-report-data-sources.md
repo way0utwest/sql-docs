@@ -2,9 +2,12 @@
 title: "Manage Report Data Sources | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-data"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "reporting-services-sharepoint"
   - "reporting-services-native"
@@ -20,6 +23,7 @@ caps.latest.revision: 52
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Manage Report Data Sources
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], reports, report models, and data-driven subscriptions retrieve data from external data sources. To connect to an external data source, a report server uses data source connection information that is defined in or referenced from the report, model, or subscription. Data source connection properties are always defined with the report or model when you create it, but can be independently managed after the report or model is published to a report server.  

@@ -2,9 +2,12 @@
 title: "Intrinsic Member Properties (MDX) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -17,9 +20,11 @@ ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
 caps.latest.revision: 41
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "On Demand"
 ---
 # MDX Member Properties - Intrinsic Member Properties
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] exposes intrinsic properties on dimension members that you can include in a query to return additional data or metadata for use in a custom application, or to assist in model investigation or construction. If you are using the SQL Server client tools, you can view intrinsic properties in SQL Server Management Studio (SSMS).  
   
  Intrinsic properties include **ID**, **KEY**, **KEYx**, and **NAME**, which are properties exposed by every member, at any level. You can also return positional information, such as **LEVEL_NUMBER** or **PARENT_UNIQUE_NAME**, among others.  

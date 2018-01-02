@@ -2,9 +2,12 @@
 title: "Monitoring Report Server Performance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-server"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "reporting-services-sharepoint"
   - "reporting-services-native"
@@ -23,6 +26,7 @@ caps.latest.revision: 64
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Monitoring Report Server Performance
   Use performance monitoring tools to monitor report server performance to evaluate server activity, watch trends, diagnose system bottlenecks, and gather data that can help you determine whether the current system configuration is sufficient. To tune server performance, you can specify how often to recycle the report server application domain. For more information, see [Configure Available Memory for Report Server Applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  

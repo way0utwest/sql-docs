@@ -3,13 +3,15 @@ title: "SQL Server R Tutorials | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
 ms.date: "08/29/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "tutorial"
 applies_to: 
   - "SQL Server 2016"
 dev_langs: 
@@ -18,6 +20,7 @@ caps.latest.revision: 1
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # SQL Server R tutorials
 

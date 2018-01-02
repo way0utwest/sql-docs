@@ -2,9 +2,12 @@
 title: "AllowDuplicateNames Element (ASSL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "docset-sql-devref"
@@ -25,9 +28,11 @@ ms.assetid: d0a80040-115f-4490-926f-4d64d8977e67
 caps.latest.revision: 38
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # AllowDuplicateNames Element (ASSL)
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Determines whether duplicate names are allowed in a [Hierarchy](../../../analysis-services/scripting/objects/hierarchy-element-assl.md) element.  
   
 ## Syntax  

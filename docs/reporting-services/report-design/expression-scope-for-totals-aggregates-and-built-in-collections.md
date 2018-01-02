@@ -2,9 +2,12 @@
 title: "Expression Scope for Totals, Aggregates, and Built-in Collections | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-design"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "reporting-services-sharepoint"
   - "reporting-services-native"
@@ -15,6 +18,7 @@ caps.latest.revision: 11
 author: "maggiesMSFT"
 ms.author: "maggies"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 # Expression Scope for Totals, Aggregates, and Built-in Collections
   When you write expressions, you will find that  the term *scope* is used in multiple contexts. Scope can specify the data to use for evaluating an expression, the set of text boxes on a rendered page, the set of report items that can be shown or hidden based on a toggle. You will see the term *scope* in topics that relate to expression evaluation, aggregate function syntax, conditional visibility, and also in error messages related to these areas. Use the following descriptions to help differentiate which meaning of *scope* applies:  

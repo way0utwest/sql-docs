@@ -2,9 +2,12 @@
 title: "Delete a Power Pivot Data Feed Library | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
   - "analysis-services/multidimensional-tabular"
@@ -15,9 +18,11 @@ ms.assetid: 5dbfc67e-7260-445a-8210-a9d33827db7f
 caps.latest.revision: 7
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Inactive"
 ---
 # Delete a Power Pivot Data Feed Library
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   You must be the site owner to delete a data feed library. If the library contains items, they will be deleted along with the library.  
   
  You must know the name of the data feed library you want to delete.  

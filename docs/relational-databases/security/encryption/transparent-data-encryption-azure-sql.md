@@ -2,26 +2,26 @@
 title: "TDE for Azure SQL Database and Data Warehouse | Microsoft Docs"
 description: "An overview of Transparent Data Encryption for SQL Database and Data Warehouse. The document covers its benefits, and the options for configuration, including Service-managed TDE and Bring Your Own Key."
 keywords:
-services: "sql-database"
-documentationcenter: ""
 author: "becczhang"
-manager: "jhubbard"
+manager: "craigg"
 editor: ""
-ms.assetid:
+ms.prod: 
+ms.reviewer: ""
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: "sql-database"
-ms.custom: "security"
+ms.component: "security"
+ms.custom: 
 ms.workload:
 ms.tgt_pltfrm:
 ms.devlang: "na"
 ms.topic: "article"
 ms.date: "08/07/2017"
 ms.author: "rebeccaz"
+ms.workload: "On Demand"
 ---
-
-
 # Transparent Data Encryption for Azure SQL Database and Data Warehouse
-
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 Transparent Data Encryption (TDE) helps protect Azure SQL Database and Data Warehouse against the threat of malicious activity by performing real-time encryption and decryption of the database, associated backups, and transaction log files at rest without requiring changes to the application.
 
@@ -84,8 +84,8 @@ To configure TDE through PowerShell, you must be connected as the Azure Owner, C
 | Cmdlet | Description |
 | --- | --- |
 | [Set-AzureRmSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/set-azurermsqldatabasetransparentdataencryption) |Enables or disables TDE for a database.|
-| [Get-​Azure​Rm​Sql​Database​Transparent​Data​Encryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |Gets the TDE state for a database. |
-| [Get-​Azure​Rm​Sql​Database​Transparent​Data​Encryption​Activity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity) |Checks the encryption progress for a database. |
+| [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |Gets the TDE state for a database. |
+| [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption-Activity](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryptionactivity) |Checks the encryption progress for a database. |
 | [Add-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey) |Adds a Key Vault key to a SQL server. |
 | [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey) |Gets a SQL server's Key Vault keys. |
 | [Set-AzureRmSqlServerTransparentDataEncryptionProtector](/powershell/module/azurerm.sql/set-azurermsqlservertransparentdataencryptionprotector) |Sets the TDE Protector for a SQL server. |
@@ -101,7 +101,7 @@ Connect to the database using a login that is an administrator or member of the 
 | --- | --- |
 | [ALTER DATABASE (Azure SQL Database)](/sql/t-sql/statements/alter-database-azure-sql-database) | Use SET ENCRYPTION ON/OFF to encrypt or decrypt a database. |
 | [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) |Returns information about the encryption state of a database and its associated database encryption keys. |
-| [sys.dm_pdw_nodes_database_encryption_keys](https://docs.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql) |Returns information about the encryption state of each data warehouse node and its associated database encryption keys. | 
+| [sys.dm_pdw_nodes_database_encryption_keys](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql) |Returns information about the encryption state of each data warehouse node and its associated database encryption keys. | 
 |  | |
 
 The TDE Protector cannot be switched to a key from Azure Key Vault using Transact-SQL; use PowerShell or the Azure portal.

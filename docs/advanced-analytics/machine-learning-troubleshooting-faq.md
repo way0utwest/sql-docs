@@ -2,9 +2,12 @@
 title: "Troubleshooting and FAQ for machine learning in SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "machine-learning-services"
+ms.prod_service: "machine-learning-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""
@@ -12,6 +15,7 @@ ms.topic: "article"
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 
 # Troubleshoot machine learning

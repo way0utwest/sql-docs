@@ -2,9 +2,12 @@
 title: "Get started with this simple example of the Import and Export Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/15/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
+ms.prod_service: "integration-services"
+ms.service: ""
+ms.component: "import-export-data"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "integration-services"
 ms.tgt_pltfrm: ""
@@ -14,6 +17,7 @@ caps.latest.revision: 22
 author: "douglaslMS"
 ms.author: "douglasl"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Get started with this simple example of the Import and Export Wizard
 Learn what to expect in the SQL Server Import and Export Wizard by walking through a common scenario - importing data from an Excel spreadsheet to a SQL Server database. Even if you plan to use a different source and a different destination, this topic shows you most of what you need to know about running the wizard.
@@ -83,7 +87,7 @@ For more info about this page of the wizard, see [Specify Table Copy or Query](.
 On the next page, **Select Source Tables and Views**, you pick the table or tables that you want to copy from the data source. Then you map each selected source table to a new or existing destination table.
 
 In this example, by default the wizard has mapped the **WizardWalkthrough$** worksheet in the **Source** column to a new table with the same name at the SQL Server destination. (The Excel workbook only contains a single worksheet.)
--   The dollar sign ($) on the name of the source table indicates an Excel worksheet. (A named ranged in Excel is represented by its name alone.)
+-   The dollar sign ($) on the name of the source table indicates an Excel worksheet. (A named range in Excel is represented by its name alone.)
 -   The starburst on the destination table icon indicates that the wizard is going to create a new destination table.
 
 ![Select the table (before renaming)](../../integration-services/import-export-data/media/select-the-table-before-renaming.jpg)

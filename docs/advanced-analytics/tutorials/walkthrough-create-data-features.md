@@ -2,13 +2,15 @@
 title: "Create data features using R and SQL (walkthrough) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
+ms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.topic: "tutorial"
 applies_to: 
   - "SQL Server 2016"
 dev_langs: 
@@ -18,6 +20,7 @@ caps.latest.revision: 21
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Create data features using R and SQL (walkthrough)
 
@@ -240,9 +243,9 @@ Your times might vary significantly, depending on your network speed, and your h
 
 ## Next lesson
 
-[Build an R model and save to SQL](/walkthrough-build-and-save-the-model.md)
+[Build an R model and save to SQL](walkthrough-build-and-save-the-model.md)
 
 ## Previous lesson
 
-[View and summarize data using R](/walkthrough-view-and-summarize-data-using-r.md)
+[View and summarize data using R](walkthrough-view-and-summarize-data-using-r.md)
 

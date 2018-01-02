@@ -2,9 +2,12 @@
 title: "Migrate a Reporting Services Installation (SharePoint Mode) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/17/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "reporting-services-native"
   - "reporting-services-sharepoint"
@@ -15,6 +18,7 @@ caps.latest.revision: 23
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 
 # Migrate a Reporting Services Installation (SharePoint Mode)

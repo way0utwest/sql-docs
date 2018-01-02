@@ -2,9 +2,12 @@
 title: "Using the MicrosoftML Package with SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "machine-learning-services"
+ms.prod_service: "machine-learning-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "r-services"
 ms.tgt_pltfrm: ""
@@ -16,6 +19,7 @@ caps.latest.revision: 132
 author: "jeannt"
 ms.author: "jeannt"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Using the MicrosoftML package with SQL Server
 

@@ -2,9 +2,12 @@
 title: "Show Hidden Datasets for Parameter Values - Multidimensional Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "report-data"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "reporting-services-sharepoint"
   - "reporting-services-native"
@@ -15,6 +18,7 @@ caps.latest.revision: 7
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Show Hidden Datasets for Parameter Values - Multidimensional Data
   Your report might include automatically-generated datasets (also known as hidden datasets) that do not appear by default in the Report Data pane. These datasets are created in the following ways:  

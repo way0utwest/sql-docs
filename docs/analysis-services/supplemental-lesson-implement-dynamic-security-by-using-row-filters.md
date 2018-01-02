@@ -2,9 +2,12 @@
 title: "Implement Dynamic Security by Using Row Filters | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"
-ms.prod:
+ms.prod: "analysis-services"
+ms.prod_service: "analysis-services, azure-analysis-services"
+ms.service: ""
+ms.component: ""
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "analysis-services"
 ms.tgt_pltfrm: ""
@@ -13,7 +16,7 @@ applies_to:
 ms.assetid:
 author: "Minewiskan"
 ms.author: "owend"
-manager: "erikre"
+manager: "kfile"
 ---
 # Supplemental Lesson - Implement Dynamic Security by Using Row Filters
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]

@@ -2,9 +2,12 @@
 title: "Server Properties (Advanced Page) - Reporting Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "tools"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "reporting-services-sharepoint"
   - "reporting-services-native"
@@ -17,6 +20,7 @@ caps.latest.revision: 18
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "On Demand"
 ---
 
 # Server Properties (Advanced Page) - Reporting Services
@@ -115,6 +119,9 @@ Should PowerBI ReportServer enable the display of PowerBI custom visuals. Values
 
 **EnablePowerBIReportExportData** ***(Power BI Report Server only)***  
 Should PowerBI ReportServer enable the export of data from PowerBI visuals. Values are True, False.  Default is True.  
+
+**ScheduleRefreshTimeoutMinutes** ***(Power BI Report Server only)***  
+Data refresh timeout in minutes for Scheduled refresh on PowerBI reports with embedded AS models. Default is 120 minutes.
 
 **EnableTestConnectionDetailedErrors**  
 Indicates whether detailed error messages are sent to the client computer when users test data source connections using the report server. The default value is **true**. If the option is set to **false**, only generic error messages are sent.

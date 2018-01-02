@@ -2,9 +2,12 @@
 title: "Implementing the IRenderingExtension Interface | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "extensions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
@@ -20,6 +23,7 @@ caps.latest.revision: 43
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Implementing the IRenderingExtension Interface
   The rendering extension takes the results from a report definition that is combined with the actual data and renders the resulting data to a format that is useable. The transformation of the combined data and formatting is done by using a common language runtime (CLR) class that implements <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>. This transforms the object model into an output format that is consumable by a viewer, printer, or other output target.  

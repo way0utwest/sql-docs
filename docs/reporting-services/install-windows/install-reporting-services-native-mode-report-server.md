@@ -1,11 +1,13 @@
 ---
-title: "Install Reporting Services native mode report server | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/17/2017"
-ms.prod: "sql-server-2016"
+title: "Install Reporting Services 2016 native mode report server | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/20/2017"
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "reporting-services-native"
 ms.tgt_pltfrm: ""
@@ -18,9 +20,10 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 caps.latest.revision: 68
 author: "guyinacube"
 ms.author: "asaxton"
-manager: "erikre"
+manager: "kfile"
+ms.workload: "Active"
 ---
-# Install Reporting Services native mode report server
+# Install Reporting Services 2016 native mode report server
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -149,7 +152,7 @@ A [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode repo
   
 9. Feature Configuration Rules: verify the rules passed. The setup wizard automatically advances to the **Ready to install** if the rules all pass.  Specific to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], the rules verify a report server catalog and temp catalog database do not already exist.  
   
-10. ![note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "note")On the **ready to install** page, note the path to the  configuration file as you can refer to it at a later time for a good summary of the servers initial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuration including the components installed, service accounts and administrators.  
+10. On the **ready to install** page, note the path to the  configuration file as you can refer to it at a later time for a good summary of the servers initial [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuration including the components installed, service accounts and administrators.  
   
 11. After the SQL Server installation wizard is complete, verify the default Native mode installation using the following basic steps.  
   

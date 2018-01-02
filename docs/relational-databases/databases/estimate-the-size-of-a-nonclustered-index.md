@@ -2,9 +2,11 @@
 title: "Estimate the Size of a Nonclustered Index | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
+ms.prod: sql-non-specified
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "SQL"
+ms.prod_service: database-engine, sql-database
+ms.component: indexes
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -23,8 +25,12 @@ caps.latest.revision: 40
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "On Demand"
 ---
 # Estimate the Size of a Nonclustered Index
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   Follow these steps to estimate the amount of space that is required to store a nonclustered index:  
   
 1.  Calculate variables for use in steps 2 and 3.  

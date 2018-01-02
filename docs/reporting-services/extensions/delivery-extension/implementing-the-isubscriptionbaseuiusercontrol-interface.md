@@ -2,9 +2,12 @@
 title: "Implementing the ISubscriptionBaseUIUserControl Interface | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-native"
+ms.service: ""
+ms.component: "extensions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "docset-sql-devref"
   - "reporting-services-native"
@@ -21,6 +24,7 @@ caps.latest.revision: 35
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Implementing the ISubscriptionBaseUIUserControl Interface
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] delivery extensions can contain an implementation of a subscription user interface (UI) for gathering extension-specific information in Report Manager. The UI is invoked when a user creates a new subscription or modifies an existing one. When a new subscription is being created, the UI displays suitable default values and enables users to interact with the delivery provider. When a subscription is being modified, the UI is pre-populated with the information in the current subscription.  

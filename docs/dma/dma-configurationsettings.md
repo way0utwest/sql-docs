@@ -1,10 +1,13 @@
 ---
 title: "Configuration settings (SQL Server Data Migration Assistant) | Microsoft Docs"
-ms.custom: 
+ms.custom: ""
 ms.date: "08/31/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "dma"
+ms.service: ""
+ms.component:
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-dma"
 ms.tgt_pltfrm: ""
@@ -17,6 +20,7 @@ caps.latest.revision: ""
 author: "HJToland3"
 ms.author: "jtoland"
 manager: "craigg"
+ms.workload: "Inactive"
 ---
 
 # Configuration settings for Data Migration Assistant
@@ -88,7 +92,7 @@ During assessment, Data Migration Assistant extracts data-tier application (dacp
 
 - databaseLockTimeout
 
-   This is equivalent to [SET LOCK\_TIMEOUT timeout\_period ](https://msdn.microsoft.com/library/ms189470.aspx) in *milliseconds*. (Default=5000)
+   This is equivalent to [SET LOCK\_TIMEOUT timeout\_period ](../t-sql/statements/set-lock-timeout-transact-sql.md) in *milliseconds*. (Default=5000)
 
 - maxDataReaderDegreeOfParallelism
 

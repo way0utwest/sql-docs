@@ -2,9 +2,12 @@
 title: "SharePoint Site and List Permission Reference for Report Server Items | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "security"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "reporting-services-sharepoint"
   - "reporting-services-native"
@@ -20,6 +23,7 @@ caps.latest.revision: 14
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # SharePoint Site and List Permission Reference for Report Server Items
   This topic provides a reference of the permissions in SharePoint that can be used to grant access to report server operations for a report server that runs in SharePoint integrated mode. If you are creating custom permission levels, this topic can help you choose which permissions to use.  

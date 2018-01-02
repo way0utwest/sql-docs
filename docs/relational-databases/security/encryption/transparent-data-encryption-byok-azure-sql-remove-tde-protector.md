@@ -5,23 +5,24 @@ keywords:
 services: "sql-database"
 documentationcenter:
 author: "becczhang"
-manager: "jhubbard"
-editor:
-ms.assetid:
+manager: "craigg"
+ms.prod: 
+ms.reviewer: ""
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: "sql-database"
-ms.custom: "security"
-ms.workload:
+ms.custom: 
+ms.component: "security"
+ms.workload: "On Demand"
 ms.tgt_pltfrm:
 ms.devlang: "na"
 ms.topic: "article"
 ms.date: "08/07/2017"
 ms.author: "rebeccaz"
+ms.workload: "Inactive"
 ---
-
-
 # Remove a Transparent Data Encryption (TDE) protector using PowerShell
-
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 ## Prerequisites
 - You must have an Azure subscription and be an administrator on that subscription

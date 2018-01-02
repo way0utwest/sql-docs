@@ -2,9 +2,12 @@
 title: "Pause and Resume Shared Schedules | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "subscriptions"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "reporting-services-sharepoint"
   - "reporting-services-native"
@@ -23,6 +26,7 @@ caps.latest.revision: 36
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # Pause and Resume Shared Schedules
   You can pause and resume a shared schedule that is in use. Pausing a shared schedule provides a way to temporarily freeze a schedule that is used to trigger report processing and subscriptions. Only shared schedules can be paused and resumed. You cannot pause report-specific schedules.  

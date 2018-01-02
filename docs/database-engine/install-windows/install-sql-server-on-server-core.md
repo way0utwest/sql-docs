@@ -2,11 +2,12 @@
 title: "Install SQL Server 2016 on Server Core | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/05/2017"
-ms.prod: 
- - "sql-server-2016"
- - "sql-server-2017"
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: "install-windows"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "setup-install"
 ms.tgt_pltfrm: ""
@@ -18,6 +19,7 @@ ms.author: "mikeray"
 manager: "jhubbard"
 ---
 # Install SQL Server on Server Core
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 You can install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Server Core installation.   
   
 The Server Core installation option provides a minimal environment for running specific server roles. This helps to reduce maintenance and management requirements and the attack surface for those server roles. For more information on Server Core, see [Install Server Core](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core). For more information on Server Core as implemented on [!INCLUDE[win8srv](../../includes/win8srv-md.md)], see [Server Core for Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
@@ -46,7 +48,7 @@ The Server Core installation option provides a minimal environment for running s
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|No||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|No||  
 |Client Tools Connectivity|Yes||  
-|Integration Services Server|Yes|For more information about the new Integration Services Server and its features in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], see [Integration Services (SSIS) Server](https://msdn.microsoft.com/library/bb522534.aspx).|  
+|Integration Services Server|Yes|For more information about the new Integration Services Server and its features in [!INCLUDE[ssCurrent](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md).|  
 |Client Tools Backward Compatibility|No||  
 |Client Tools SDK|No||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online|No||  

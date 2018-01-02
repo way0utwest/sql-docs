@@ -3,8 +3,11 @@ title: "SSMS Output Window | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssms"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "tools-ssms"
 ms.tgt_pltfrm: ""
@@ -18,8 +21,10 @@ caps.latest.revision: 1
 author: "shueybubbles"
 ms.author: "davidshi"
 manager: "kenvh"
+ms.workload: "Inactive"
 ---
 # Output Window in SQL Server Management Studio
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 The Output Window can be opened from the View menu or by using the key combination Ctrl+Alt+O. There are multiple channels of output available.
 
 The following table gives an overview of the types of messages associated with each output channel.

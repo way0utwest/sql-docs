@@ -2,9 +2,12 @@
 title: "InstanceID Property (WMI MSReportServer_Instance) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "reporting-services"
+ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.service: ""
+ms.component: "wmi-provider-library-reference"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "pro-bi"
 ms.technology: 
   - "reporting-services-sharepoint"
   - "reporting-services-native"
@@ -22,6 +25,7 @@ caps.latest.revision: 15
 author: "guyinacube"
 ms.author: "asaxton"
 manager: "erikre"
+ms.workload: "Inactive"
 ---
 # MSReportServer_Instance Properties - InstanceID
   This object supports the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] infrastructure and is not intended to be used directly from your code.  

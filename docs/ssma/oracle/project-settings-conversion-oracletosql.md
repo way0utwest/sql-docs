@@ -1,10 +1,13 @@
 ---
 title: "Project Settings (Conversion) (OracleToSQL) | Microsoft Docs"
 ms.prod: "sql-non-specified"
+ms.prod_service: "sql-tools"
+ms.service: ""
+ms.component: "ssma-oracle"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "sql-ssma"
 ms.tgt_pltfrm: ""
@@ -16,6 +19,7 @@ caps.latest.revision: 15
 author: "Shamikg"
 ms.author: "Shamikg"
 manager: "v-thobro"
+ms.workload: "Inactive"
 ---
 # Project Settings (Conversion) (OracleToSQL)
 The Conversion page of the **Project Settings** dialog box contains settings that customize how SSMA converts Oracle syntax to [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] syntax.  

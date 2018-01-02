@@ -2,9 +2,11 @@
 title: "Installing SMO | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
-ms.prod: "sql-server-2016"
+ms.prod: "sql-non-specified"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
+ms.prod_service: "database-engine"
+ms.component: "smo"
 ms.technology: 
   - "docset-sql-devref"
 ms.tgt_pltfrm: ""
@@ -19,9 +21,12 @@ author: "JennieHubbard"
 ms.author: "jhubbard"
 manager: "jhubbard"
 
+ms.workload: "On Demand"
 ---
 
 #Installing SMO
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 This page provides information on how to install SMO for use by applications and the system requirements to use SMO.
 

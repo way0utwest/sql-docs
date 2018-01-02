@@ -3,8 +3,11 @@ title: "Pages and Extents Architecture Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/21/2016"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "relational-databases-misc"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -17,9 +20,10 @@ caps.latest.revision: 2
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Inactive"
 ---
 # Pages and Extents Architecture Guide
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 The page is the fundamental unit of data storage in SQL Server. An extent is a collection of eight physically contiguous pages. Extents help efficiently manage pages. This guide describes the data structures that are used to manage pages and extents in all versions of SQL Server. Understanding the architecture of pages and extents is important for designing and developing databases that perform efficiently.
 
@@ -39,7 +43,7 @@ The following table shows the page types used in the data files of a SQL Server 
 |-------|-------|
 |Data |Data rows with all data, except text, ntext, image, nvarchar(max), varchar(max), varbinary(max), and xml data, when text in row is set to ON. |
 |Index |Index entries. |
-|Test/Image |Large object data types: (text, ntext, image, nvarchar(max), varchar(max), varbinary(max), and xml data) <br> Variable length columns when the data row exceeds 8 KB: (varchar, nvarchar, varbinary, and sql_variant) |
+|Text/Image |Large object data types: (text, ntext, image, nvarchar(max), varchar(max), varbinary(max), and xml data) <br> Variable length columns when the data row exceeds 8 KB: (varchar, nvarchar, varbinary, and sql_variant) |
 |Global Allocation Map, Shared Global Allocation Map |Information about whether extents are allocated. |
 |Page Free Space (PFS) |Information about page allocation and free space available on pages. |
 |Index Allocation Map |Information about extents used by a table or index per allocation unit. |

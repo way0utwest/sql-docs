@@ -2,10 +2,13 @@
 title: "Connection libraries for Microsoft SQL Databases | Microsoft Docs"
 description: "Provides download links for modules which enable connection to Microsoft SQL Server and Azure SQL Database, from a variety of client programming languages."
 author: MightyPen
-ms.service:
-ms.prod: "sql-server"
+ms.service: ""
+ms.component: "connect"
+ms.suite: "sql"
+ms.prod: "sql-non-specified"
+ms.prod_service: "drivers"
 ms.technology: "dbe-data-tier-apps"
-ms.custom: "develop apps"
+ms.custom: ""
 ms.workload: "data-management"
 ms.topic: article
 ms.date: 08/09/2017
@@ -50,9 +53,9 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | :------- | :---------------------- |
 | C#       | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET Core, for Linux-Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET Core, for MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET Core, for Windows](https://www.microsoft.com/net/core) |
 | C++      | [ODBC 13.1](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
-| Java     | [JDBC](http://go.microsoft.com/fwlink/?LinkId=245496)<br />[Download 6.2](http://www.microsoft.com/download/details.aspx?id=55539) |
+| Java     | [JDBC](http://www.microsoft.com/download/details.aspx?id=55539) |
 | Node.js  | [Node.js driver, install instructions](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
-| PHP      | *Operating system:*<br /><br />[Windows PHP driver](http://www.microsoft.com/download/details.aspx?id=20098)<br />[Ubuntu or MacOS PHP driver, from Github](http://github.com/Microsoft/msphpsql/tree/dev#install-unix) |
+| PHP      | *Operating system:*<br /><br />[Windows PHP driver](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Ubuntu or MacOS PHP driver, from Github](http://github.com/Microsoft/msphpsql/tree/dev#install-unix) |
 | Python   | [pyodbc, install instructions](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[Download ODBC 13.1](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Ruby     | [Ruby driver, install instructions](https://docs.microsoft.com/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development)<br />[Ruby download page](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |

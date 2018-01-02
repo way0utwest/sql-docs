@@ -4,11 +4,17 @@ description: This topic describes SQL Server on Linux restrictions.
 author: BYHAM 
 ms.author: rickbyh 
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine"
+ms.service: ""
+ms.component: sql-linux
+ms.suite: "sql"
+ms.custom: ""
 ms.technology: database-engine
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
+ms.workload: "Inactive"
 ---
 # Security limitations for SQL Server on Linux
 
@@ -19,9 +25,9 @@ SQL Server on Linux currently has the following limitations:
 * A standard password policy is provided. MUST_CHANGE is the only option you may configure.  
 * Extensible Key Management is not supported. 
 * Using keys stored in the Azure Key Vault is not supported.
-* SQL Server generates its own self-signed certificate for encrypting connections. Currently, SQL Server cannot be configured to use a user provided certificate for SSL or TLS. 
+* SQL Server generates its own self-signed certificate for encrypting connections. SQL Server can be configured to use a user provided certificate for TLS. 
 
-For more infomation about security features available in SQL Server, see the [Security Center for SQL Server Database Engine and Azure SQL Database](https://msdn.microsoft.com/library/bb510589.aspx).
+For more infomation about security features available in SQL Server, see the [Security Center for SQL Server Database Engine and Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
 
 ## Next steps
 

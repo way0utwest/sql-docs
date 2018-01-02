@@ -3,8 +3,11 @@ title: "KILL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/31/2017"
 ms.prod: "sql-non-specified"
+ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.service: ""
+ms.component: "t-sql|language-elements"
 ms.reviewer: ""
-ms.suite: ""
+ms.suite: "sql"
 ms.technology: 
   - "database-engine"
 ms.tgt_pltfrm: ""
@@ -37,9 +40,10 @@ caps.latest.revision: 61
 author: "BYHAM"
 ms.author: "rickbyh"
 manager: "jhubbard"
+ms.workload: "Active"
 ---
 # KILL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Terminates a user process that is based on the session ID or unit of work (UOW). If the specified session ID or UOW has much work to undo, the KILL statement may take some time to complete, particularly when it involves rolling back a long transaction.  
   
@@ -110,8 +114,10 @@ Use @@SPID to display the session ID value for the current session.
   
  If the rollback of the session ID or UOW has finished when the KILL *session ID*|*UOW* WITH STATUSONLY statement is executed, or if no session ID or UOW is being rolled back, KILL *session ID*|*UOW* WITH STATUSONLY returns the following error:  
   
- `"Msg 6120, Level 16, State 1, Line 1"`  
- `"Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."`  
+ ```
+"Msg 6120, Level 16, State 1, Line 1"  
+"Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."
+```  
   
  The same status report can be obtained by repeating the same KILL *session ID*|*UOW* statement without using the WITH STATUSONLY option; however, we do not recommend doing this. Repeating a KILL *session ID* statement might terminate a new process if the rollback had finished and the session ID was reassigned to a new task before the new KILL statement is run. Specifying WITH STATUSONLY prevents this from happening.  
   
