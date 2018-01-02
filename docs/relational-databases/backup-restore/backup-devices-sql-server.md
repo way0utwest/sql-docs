@@ -68,7 +68,7 @@ ms.workload: "On Demand"
   
  BACKUP DATABASE *database_name*  
   
- TO DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ TO DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* | NUL}  
   
  For example:  
   
@@ -128,7 +128,10 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
- 
+## NUL Device
+
+On Windows systems, the NUL device (or NUL:) is a device that discards all input sent to it. For a backup process, all pages are read with the normal backup process and sent to the NUL device and discarded by the Windows operating system. This allows you to test the backup process without any network or disk I/O latency.
+
 ##  <a name="TapeDevices"></a> Using tape devices  
   
 > **NOTE:** Support for tape backup devices will be removed in a future version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avoid using this feature in new development work, and plan to modify applications that currently use this feature.  
