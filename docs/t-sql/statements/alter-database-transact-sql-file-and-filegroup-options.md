@@ -380,6 +380,9 @@ You can move system or user-defined data and log files by specifying the new loc
 
 For more information, see [Move Database Files](../../relational-databases/databases/move-database-files.md).
 
+> [!NOTE]
+> This command does not move or rename the physical files (MDF, LDF, or NDF). This only updates the file location or name in the system databases. You must perform the actual file operations manually.
+
 ## Initializing Files
 
 By default, data and log files are initialized by filling the files with zeros when you perform one of the following operations:
