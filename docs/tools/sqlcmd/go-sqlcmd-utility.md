@@ -109,13 +109,119 @@ The **go-sqlcmd** utility (preview) lets you enter Transact-SQL statements, syst
 
 1. Extract the `sqlcmd` file from the downloaded zip folder.
 
+## Check version
+
+To check the SQLCMD version execute `sqlcmd --version` command. This will return the version as well as links to the legal documents and third party notices.
+
 ## Syntax
 
-For more in-depth information on sqlcmd syntax and use, see:
+There are two sets of syntax for the go-sqlcmd utility: one is newer using contexts and verbs after the executable. The other uses the parameters of the previous sqlcmd utility. For more in-depth information on sqlcmd syntax and use, see:
 
 - [sqlcmd syntax](./sqlcmd-utility.md#syntax)
 - [Start the sqlcmd Utility](sqlcmd-start-utility.md)
 - [Use the sqlcmd Utility](sqlcmd-use-utility.md)
+
+The newer syntax uses a command and parameters to control the utility. The commands are described in the next section. There are also a number of common flags in use:
+
+```
+sqlcmd
+  [-h]
+  [--help]
+  [--sqlconfig string]
+  [--verbosity int]
+  [--version]
+```
+Each of these is described below:
+- -h - provides help for the current context
+- --help - provides help for the current context
+- --sqlconfig - sets the configuration file to use. The default is %userprofile%\.sqlcmd\sqlconfig on Windows
+- --verbosity integer - sets the logging level. Levels in use are: error=0, warn=1, info=2, debug=3, trace=4 (default 2)
+- --version - prints the version of sqlcmd
+
+### Commands
+
+These are the commands used by go-sqlcmd.
+
+|Command|Description|
+| --- | --- |
+| sqlcmd completion |  Generate the autocompletion script for the specified shell |
+| sqlcmd config |  Modify sqlconfig files using subcommands |
+| sqlcmd create |  Install/Create SQL Server, Azure SQL, and Tools | 
+| sqlcmd delete |  Uninstall/Delete the current context |
+| sqlcmd help |  Help about any command |
+| sqlcmd open |  Open tools (e.g ADS) for the current context |
+| sqlcmd query |  Run a query against the current context |
+| sqlcmd start |  Start current context |
+| sqlcmd stop | Stop current context |
+
+More information about each of these commands is included below.
+
+** sqlcmd config
+```
+sqlcmd config [add-context --endpoint string [--name string] [--user string]]
+              [add-endpoint [--name [string]] [--address string] [--port int]]
+              [add-user [--auth-type string] [--name string] [--password-encryption string] [--username string]]
+              [connection-strings]
+              [current-context]
+              [delete-context [--name] string]
+              [delete-endpoint [--name] string]
+              [delete-user --name string]
+              [get-contexts]
+              [get-endpoints]
+              [get-users]
+              [use-context]
+              [view]
+```
+Each of these comment can have their own parameters to alter the configuration of the sqlcmd configuration files. These are each described below.
+**add-context**
+This command adds a context for use by queries. If successful, the current context is switched to the new context.
+The endpoint is the name used in an add-endpoint command.
+The name parameter is the name that is returned by get-contexts or current-context. The name defaults to "context" if not provided. If a context already exists with the name "context", context2 will be used. An incremental number is added for each new context if name is not provided. 
+
+**add-endpoint**
+This command adds an endpoint. If successful a message is returned that a new endpoint has been created.
+The name is a string that can be used in add-context or delete-endpoint commands. The name defaults to endpoint if not provided. Subsequent calls will use endpont2, endpoint3, etc. if the name is not provided. 
+The address defults to localhost if not provided. 
+The port defaults to 1433 if not provided.
+
+**add-user**
+This command adds a user. If successful, the name of this user can be used in add-context commands.
+The auth-type is the type of authentication to use: basic or other. The default is basic.
+The name is a value used in add-context commands. If not provided, the default is user. If user is taken, user2 is used with subsequent calls wil return user3, user4, etc. if the name is not provided.
+The password-encryption determines the method used in the sqlconfig file. This can be non or dpapi. If the auth-type is basic, this flag must be included.
+The username is the loginname used for SQL Server.
+The password to use for SQL logins needs to be set in the environment variable SQLCMDPASSWORD.
+
+**connection-strings**
+This command displays connections strings for the current context. This can be abbreviated as cs. This returns the connection string for the current container is one is running.
+
+**current-context**
+This command displays the current-context that is used for queries.
+
+**delete-context**
+This command deletes a context. If the current context is deleted, sqlcmd automatically switches to another context.
+The name is the name of a context created with add-context
+
+**delete-endpoint**
+This command deletes an endpoint. A delete-context command also deletes an endpoint.
+The name is the name used in the add-endpoint command.
+
+**delete-user**
+This command deletes a user. 
+The name is the name used in the add-user command.
+
+**get-contexts**
+This command displays one or many contexts from the sqlconfig file
+
+**get-endpoints**
+This command displays one or many endpoints from the sqlconfig file
+
+**get-users**
+This command displays one or many users from the sqlconfig file
+
+
+  use-context        Set the current context
+  view               Display merged sqlconfig settings or a specified sqlconfig file
 
 ### Break changes from sqlcmd
 
