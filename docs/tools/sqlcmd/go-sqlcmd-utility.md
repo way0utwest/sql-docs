@@ -111,11 +111,31 @@ The **go-sqlcmd** utility (preview) lets you enter Transact-SQL statements, syst
 
 ## Syntax
 
-For more in-depth information on sqlcmd syntax and use, see:
+There are a number of new commands for go-sqlcmd. You can also use the older syntax and switches from sqlcmd. For more in-depth information on sqlcmd syntax and use, see:
 
 - [sqlcmd syntax](./sqlcmd-utility.md#syntax)
 - [Start the sqlcmd Utility](sqlcmd-start-utility.md)
 - [Use the sqlcmd Utility](sqlcmd-use-utility.md)
+
+### New go-sqlcmd Commands
+
+The go-sqlcmd utility uses a command as the first parameter, with optional commands, parameters and values included after this. The syntax for each command is given below.
+
+sqlcmd [completion]
+This command generates the autocompletion script for the specified shell
+
+sqlcmd [config [subcommand [--parameter value]]
+This command modifies sqlconfig files using subcommands. By default, the sqlconfig file is stored in %userprofile%/.sqlcmd/sqlconfig. The subcommands for config are listed below with 
+
+
+  create      Install/Create SQL Server, Azure SQL, and Tools
+  delete      Uninstall/Delete the current context
+  help        Help about any command
+  open        Open tools (e.g ADS) for current context
+  query       Run a query against the current context
+  start       Start current context
+  stop        Stop current context
+
 
 ### Break changes from sqlcmd
 
