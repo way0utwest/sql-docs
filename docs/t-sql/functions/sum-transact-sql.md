@@ -84,6 +84,8 @@ Returns the summation of all *expression* values in the most precise *expression
 
 Also, `SUM` might appear to behave as a nondeterministic function when you use it with [float and real](../data-types/float-and-real-transact-sql.md) data types. But the underlying reason is the approximate nature of these data types.
 
+If there are no rows included in the SUM() calculation, it returns NULL.
+
 ## Examples
 
 [!INCLUDE [article-uses-adventureworks](../../includes/article-uses-adventureworks.md)]
